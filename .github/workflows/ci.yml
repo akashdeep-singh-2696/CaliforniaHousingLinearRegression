@@ -52,4 +52,4 @@ jobs:
       run: |
         docker tag californiahousinglinearregression:latest ${{ secrets.DOCKER_USERNAME }}/californiahousinglinearregression:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/californiahousinglinearregression:latest
-        echo "Docker image has been pushed successfully."
+        echo "Docker image has been pushed successfully!!"
