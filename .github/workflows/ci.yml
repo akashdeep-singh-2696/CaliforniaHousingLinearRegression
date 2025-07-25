@@ -50,6 +50,6 @@ jobs:
     - name: Push to Docker Hub
       if: success()
       run: |
-        docker tag assignment_3:latest ${{ secrets.DOCKER_USERNAME }}/californiahousinglinearregression:latest
+        docker tag californiahousinglinearregression:latest ${{ secrets.DOCKER_USERNAME }}/californiahousinglinearregression:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/californiahousinglinearregression:latest
         echo "Docker image has been pushed successfully."
