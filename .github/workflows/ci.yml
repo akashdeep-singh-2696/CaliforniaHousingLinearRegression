@@ -34,11 +34,11 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        docker build -t CaliforniaHousingLinearRegression:latest .
+        docker build -t californiahousinglinearregression:latest .
 
     - name: Test Docker container
       run: |
-        docker run --rm CaliforniaHousingLinearRegression:latest python src/predict.py
+        docker run --rm californiahousinglinearregression:latest python src/predict.py
 
     - name: Login to Docker Hub platform
       if: success()
@@ -50,6 +50,6 @@ jobs:
     - name: Push to Docker Hub
       if: success()
       run: |
-        docker tag assignment_3:latest ${{ secrets.DOCKER_USERNAME }}/CaliforniaHousingLinearRegression:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/CaliforniaHousingLinearRegression:latest
+        docker tag assignment_3:latest ${{ secrets.DOCKER_USERNAME }}/californiahousinglinearregression:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/californiahousinglinearregression:latest
         echo "Docker image has been pushed successfully."
